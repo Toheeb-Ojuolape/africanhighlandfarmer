@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title>Instructions | African Highland Farmer</title>
+</head>
+<body>
+
+    <div style="margin-top:90px">
+     <div class="row">
+         <div class="columnCharacter animate__animated animate__fadeIn animate__delay-2s">
+     <img src="/media/father.png" width="200px" height="518px" />
+    </div>
+    <div class="columnInstructions">
+        <div class="card" >
+         <h1 style="font-size:59px" class="animate__animated animate__fadeInDown animate__delay-1.5s"> Meet Abu</h1>
+         <p style="font-size:23px;padding-bottom:80px" id="writing" class="animate__animated animate__fadeInDown animate__delay-s"> 
+         </p>
+
+         <div class="pulse">  
+            <a href="/instructions1.html"> Next </a>
+          </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    
+</body>
+
+
+
+
+<style>
+   @media only screen and (min-width:768px) {
+    html {
+  min-height:100%;
+  background:linear-gradient(0deg, rgba(26, 24, 25, 0.8), rgba(26, 24, 25, 0.8)), url('/media/mainfield.png');
+  background-size:cover;
+}
+
+.row:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.columnInstructions{
+  float:left;
+  width:60%;
+  margin-top:30px;
+  margin-left:90px
+}
+
+.columnCharacter{
+  float:left;
+  width:20%;
+  margin-top:30px;
+  margin-right:-80px;
+  margin-left:70px;
+}
+
+.card{
+    padding:30px;
+    background-color:#298525;
+    color:white;
+    border-radius:15px;
+  }
+
+
+  .pulse{
+      margin-bottom:40px
+  }
+  .pulse a:hover{ 
+  animation: pulse 1s infinite;
+  animation-timing-function: linear; 
+}
+
+@keyframes pulse {
+  100% { transform: scale(1); }
+  50% { transform: scale(1.1)};
+  0% { transform: scale(1); }
+  }
+
+  a{
+  width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 25px #000;
+  margin-top: 30px;
+  border: 1px solid #444;  
+  text-align: center;
+  display: block;
+  color: #444;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover{
+    background: yellow;
+    color:rgba(26, 24, 25, 0.8)
+}
+   }
+
+</style>
+
+
+<script>
+    var i = 0;
+    var txt = `Abu is a small holder farmer living in the Highland village of Kinjobi in Wakanda, East Africa. He plants crops such
+           as beans, coffee, maize, sweetpepper and tomato on his 1 ha of land he manages with his family.`;
+    var speed = 50;
+    
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("writing").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    typeWriter()
+    </script>
+</html>
