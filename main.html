@@ -3,24 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crops | African Highland Farmer</title>
+    <title>Game page | African Highland Farmer</title>
+    <audio controls src="/media/sound.mp3" loop autoplay type="audio/mpeg" hidden>
+        <p>If you are reading this, it is because your browser does not support the audio element.     </p>
+        <embed src="/media/sound.mp3" width="180" height="90" hidden="true" />
+        </audio>
 </head>
 <body> 
-    <div class="crops" id="myBtn">  <img src="media/growing-plant.png" height="50px" width="50px" /><br>Crops</div>
-    <div class="livestock">  <img src="media/cow-silhouette.png" height="50px" width="50px" />Livestock</div>
-    <div class="family">  <img src="media/family-group-of-three.png" height="50px" width="50px" />Family</div>
-    <div class="labour">  <img src="media/no-racism.png" height="50px" width="50px" />Labour</div>
-    <div class="grass-stripes">  <img src="media/grass.png" height="50px" width="50px" /><br>Grass Strip</div>
+    <div class="crops" id="myCrops">  <img src="media/growing-plant.png" height="50px" width="50px" /><br>Crops</div>
+    <div class="livestock" id="myLivestocks">  <img src="media/cow-silhouette.png" height="50px" width="50px" />Livestock</div>
+    <div class="family" id="myFamily"><img src="media/family-group-of-three.png" height="50px" width="50px" />Family</div>
+    <div class="labour" id="myLabour">  <img src="media/no-racism.png" height="50px" width="50px" />Labour</div>
+    <div class="grass-stripes"  id="myGrass">  <img src="media/grass.png" height="50px" width="50px" /><br>Grass Strip</div>
 
-<!-- The Modal -->
+<!-- Crop Modal -->
 <div id="myModal" class="modal">
-
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <h1 style="text-align:center">Crops</h1>
+    <h1 style="text-align:center;padding-bottom:-40px">CROPS</h1>
+    <div class="row">
+        <div class="column" style="background-color:#e8d26b">
+          <div class="row">
+          <div class="columnPicture">
+        <img src="media/sweetpepper.png" width="50px" height="50px" class="imageAvatar" />
+        </div>
+          <div class="columnText" style="font-size:20px;padding-top:29px"><b>SWEET<br>PEPPER</b></div>
+        </div>
+        <div class="row">
+            <div class="columnPicture">
+          <img src="media/beans.png" width="50px" height="50px" class="imageAvatar" />
+          </div>
+            <div class="columnText" style="font-size:20px;padding-top:31px"><b>BEANS</b></div>
+          </div>
+          <div class="row">
+            <div class="columnPicture">
+          <img src="media/maize.png" width="50px" height="50px" class="imageAvatar" />
+          </div>
+            <div class="columnText" style="font-size:20px;padding-top:31px"><b>MAIZE</b></div>
+          </div>
+          <div class="row">
+            <div class="columnPicture">
+          <img src="media/coffee.png" width="50px" height="50px" class="imageAvatar" />
+          </div>
+            <div class="columnText" style="font-size:20px;padding-top:29px"><b>COFFEE</b></div>
+          </div>
+          <div class="row">
+            <div class="columnPicture">
+          <img src="media/tomato.png" width="50px" height="50px" class="imageAvatar" />
+          </div>
+            <div class="columnText" style="font-size:20px;padding-top:31px"><b>TOMATO</b></div>
+          </div>
+        </div>
+        <div class="column" style="background-color:rgb(255, 255, 255);">
+        <form action="" id="pepperForm" onsubmit="return false;">
+         <input type="number" id="pepper" placeholder="Enter Quantity" />
+        </form>
+         <input type="number"  id="beans" placeholder="Enter Quantity" />
+         <input type="number"  id="maize" placeholder="Enter Quantity" />
+         <input type="number"  id="coffee" placeholder="Enter Quantity" />
+         <input type="number"  id="tomato" placeholder="Enter Quantity" />
+        </div>
+        <div class="column" style="background-color:#e8d26b;">
+          <p class="buyNow pulse" id="resultPepper" onclick="TotalPepper()">Price : AHF 100</p>
+          <p class="buyNow" id="resultBeans" onclick="TotalBeans()">Price: AHF 200</p>
+          <p class="buyNow" id="resultMaize" onclick="TotalMaize()">Price: AHF 250</p>
+          <p class="buyNow" id="resultCoffee" onclick="TotalCoffee()">Price: AHF 300</p>
+          <p class="buyNow" id="resultTomato" onclick="TotalTomato()">Price: AHF 400</p>
+        </div>
+      </div>
+</div>
+</div>
 
+<!-- Livestock Modal -->
+<div id="livestockModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="closeLivestock">&times;</span>
+      <h1 style="text-align:center;padding-bottom:-40px">Livestock</h1>
+      <div class="row">
+          <div class="column" style="background-color:#e8d26b;padding:30px;">
+            <div style="margin-bottom:30px;text-align:center">
+            <img src="/media/kip.png" height="100px" width="100px"/>
+        </div>
+        <div style="margin-bottom:30px;text-align:center">
+            <img src="/media/geit.png" height="100px" width="100px"/>
+        </div>
+        <div style="margin-bottom:30px;text-align:center">
+            <img src="/media/koe.png" height="100px" width="172px"/>
+        </div>
+          </div>
+          <div class="column" style="margin-top:30px;background-color:rgb(255, 255, 255)">
+            <div style="margin-bottom:30px">
+           <input type="number" id="hen" placeholder="Enter Quantity" />
+        </div>
+        <div style="margin-bottom:40px">
+           <input type="number"  id="goat" placeholder="Enter Quantity" />
+        </div>
+           <input type="number"  id="cow" placeholder="Enter Quantity" />
+          </div>
+          <div class="column" style="background-color:#e8d26b;margin-top:17px">
+            <p class="buyNow" style="margin-bottom:60px" id="resultHen" onclick="TotalHen()">Price : AHF 500</p>
+            <p class="buyNow" style="margin-bottom:70px" id="resultGoat" onclick="TotalGoat()">Price: AHF 700</p>
+            <p class="buyNow" id="resultCow" onclick="TotalCow()">Price: AHF 1,000</p>
+          </div>
+        </div>
+  </div>
+  </div>
 
+  <!-- Family Modal -->
+<div id="familyModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="closeFamily">&times;</span>
+    <h1 style="text-align:center;padding-bottom:-40px">ABOUT ABU'S FAMILY</h1>
+    <div class="row" >
+      <div class="columnCharacter">
+    <img src="media/familie4.png" width="400px" height="418px" />
+  </div>
+  <div class="columnInstructions">
+    <p id="writing" style="font-size:20px"></p>
+  </div>
+  </div>
+</div>
+</div>
+
+<!-- Labour Modal -->
+<div id="labourModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="closeLabour">&times;</span>
+    <h1 style="text-align:center;padding-bottom:-40px">LABOUR</h1>
+    <div class="row" >
+      <div class="columnCharacter">
+    <img src="media/familie4.png" width="400px" height="418px" />
+  </div>
+  <div class="columnInstructions">
+    <p style="font-size:20px"> Lorem Ipsum  Lorem Ipsum Dolor Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum DolorLorem Ipsum Dolor Lorem Ipsum Dolor</p>
+  </div>
+  </div>
+</div>
+</div>
+
+<!-- Grass Modal -->
+<div id="grassModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="closeGrass">&times;</span>
+    <h1 style="text-align:center;padding-bottom:-40px">Grass Stripes</h1>
+    <p style="font-size:20px"> Lorem Ipsum Dolor Lorem Ipsum DolorLorem Ipsum DolorLorem Ipsum DolorLorem Ipsum DolorLorem Ipsum DolorLorem Ipsum DolorLorem Ipsum DolorLorem Ipsum DolorLorem Ipsum Dolor </p>
+  </div>
 </div>
 </div>
 

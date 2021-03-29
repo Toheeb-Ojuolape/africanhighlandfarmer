@@ -4,18 +4,76 @@
   background:url('/media/mainfield.png');
   background-size:cover;
 }
-.row{
-    margin:100px 200px 0px
+
+input[type=number] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 19px 0 30px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
-.row:after{
-    content: "";
+
+.buyNow{
+  border-radius:60px;
+  background:black;
+  padding:20px;
+  color:white;
+  text-align:center;
+  margin-bottom:30px
+}
+
+.buyNow:hover{
+  background:yellow;
+  color:black;
+  text-align:center;
+  animation: pulse 1s infinite;
+animation-timing-function: linear;
+}
+@keyframes pulse {
+  100% { transform: scale(1); }
+  50% { transform: scale(1.1)};
+  0% { transform: scale(1); }
+  }
+  
+
+.column {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: auto
+}
+
+.columnPicture {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+
+.columnText {
+  float: left;
+  width: 54%;
+  padding: 5px;
+}
+
+.imageAvatar{
+  padding:15px 15px 15px 15px;
+  background:white;
+  border-radius:60px;
+
+}
+.columnText {
+  float: left;
+  width: 44%;
+  padding: 10px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
   display: table;
   clear: both;
-}
-.column{
-    float:left;
-  width:30%;
-  text-align:center;
+  text-align:center
 }
 
 .card {
@@ -62,6 +120,8 @@
   width:91px;
   font-size:16px;
   margin-left:84%;
+  animation: pulse 1s infinite;
+  animation-timing-function: linear;
 }
 
 
@@ -87,6 +147,8 @@
   width:91px;
   font-size:16px;
   margin-left:84%;
+  animation: pulse 1s infinite;
+  animation-timing-function: linear;
 }
 .family{
   padding:24px 100px 20px 30px;
@@ -110,6 +172,8 @@
   width:91px;
   font-size:16px;
   margin-left:84%;
+  animation: pulse 1s infinite;
+  animation-timing-function: linear;
 }
 
 .labour{
@@ -134,6 +198,8 @@
   width:91px;
   font-size:16px;
   margin-left:84%;
+  animation: pulse 1s infinite;
+  animation-timing-function: linear;
 }
 .grass-stripes{
     padding:24px 100px 20px 30px;
@@ -157,6 +223,8 @@
   width:91px;
   font-size:16px;
   margin-left:84%;
+  animation: pulse 1s infinite;
+  animation-timing-function: linear;
 }
 /* The Modal (background) */
 .modal {
@@ -176,18 +244,76 @@
 /* Modal Content */
 .modal-content {
   background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
+  margin:-4% 3% 5% 3%;
+  padding: 5px 0px 20px 37px;
   border: 1px solid #888;
   width: 91%;
+  height:auto;
 }
 
 /* The Close Button */
 .close {
   color: #aaaaaa;
   float: right;
+  margin:10px 14px 0px 14px;
+  border-radius:80%;
+  background:black;
+  color:white;
+  padding:2px 10px 2px 10px ;
   font-size: 28px;
   font-weight: bold;
+}
+
+.closeLivestock {
+  color: #aaaaaa;
+  float: right;
+  margin:10px 14px 0px 14px;
+  border-radius:80%;
+  background:black;
+  color:white;
+  padding:2px 10px 2px 10px ;
+  font-size: 28px;
+  font-weight: bold;
+  cursor:pointer
+}
+
+.closeFamily {
+  color: #aaaaaa;
+  float: right;
+  margin:10px 14px 0px 14px;
+  border-radius:80%;
+  background:black;
+  color:white;
+  padding:2px 10px 2px 10px ;
+  font-size: 28px;
+  font-weight: bold;
+  cursor:pointer
+}
+
+.closeLabour {
+  color: #aaaaaa;
+  float: right;
+  margin:10px 14px 0px 14px;
+  border-radius:80%;
+  background:black;
+  color:white;
+  padding:2px 10px 2px 10px ;
+  font-size: 28px;
+  font-weight: bold;
+  cursor:pointer
+}
+
+.closeGrass {
+  color: #aaaaaa;
+  float: right;
+  margin:10px 14px 0px 14px;
+  border-radius:80%;
+  background:black;
+  color:white;
+  padding:2px 10px 2px 10px ;
+  font-size: 28px;
+  font-weight: bold;
+  cursor:pointer
 }
 
 .close:hover,
@@ -196,6 +322,22 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.columnInstructions{
+  float:left;
+  width:60%;
+  margin-top:30px;
+  margin-left:90px
+}
+
+.columnCharacter{
+  float:left;
+  width:25%;
+  margin-top:30px;
+  margin-left:20px;
+}
+
+
 
     }
   
