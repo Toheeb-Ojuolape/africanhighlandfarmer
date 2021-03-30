@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game page | African Highland Farmer</title>
-    <audio controls src="/media/sound.mp3" loop autoplay type="audio/mpeg" hidden>
+    <audio controls src="/media/Farmyard 3.mp3" loop autoplay type="audio/mpeg" hidden>
         <p>If you are reading this, it is because your browser does not support the audio element.     </p>
         <embed src="/media/sound.mp3" width="180" height="90" hidden="true" />
         </audio>
@@ -12,7 +12,7 @@
 <body> 
     <div class="crops" id="myCrops">  <img src="media/growing-plant.png" height="50px" width="50px" /><br>Crops</div>
     <div class="livestock" id="myLivestocks">  <img src="media/cow-silhouette.png" height="50px" width="50px" />Livestock</div>
-    <div class="family" id="myFamily"><img src="media/family-group-of-three.png" height="50px" width="50px" />Family</div>
+    <div class="family" id="myFamily" onclick="typeWriter()"><img src="media/family-group-of-three.png" height="50px" width="50px" />Family</div>
     <div class="labour" id="myLabour">  <img src="media/no-racism.png" height="50px" width="50px" />Labour</div>
     <div class="grass-stripes"  id="myGrass">  <img src="media/grass.png" height="50px" width="50px" /><br>Grass Strip</div>
 
@@ -135,12 +135,46 @@
     <span class="closeLabour">&times;</span>
     <h1 style="text-align:center;padding-bottom:-40px">LABOUR</h1>
     <div class="row" >
-      <div class="columnCharacter">
-    <img src="media/familie4.png" width="400px" height="418px" />
-  </div>
-  <div class="columnInstructions">
-    <p style="font-size:20px"> Lorem Ipsum  Lorem Ipsum Dolor Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum DolorLorem Ipsum Dolor Lorem Ipsum Dolor</p>
-  </div>
+      <div class="columnLabour">
+        <div class="card" style="text-align:center;padding:50px">
+        <img src="./media/farmer (1).png" height="100px" width="100px" />
+        <p class="name">Tim the digger</p>
+        <p>Hire For:</p>
+        <div class="hireMe" style="margin-top:10px">AHF 30/Hr</div>
+      </div>
+      </div>
+      <div class="columnLabour">
+        <div class="card" style="text-align:center;padding:50px">
+        <img src="./media/farmer (2).png" height="100px" width="100px" />
+        <p class="name">Mary the Planter</p>
+        <p>Hire For:</p>
+        <div class="buyNow" style="margin-top:10px">AHF 50/Hr</div>
+      </div>
+      </div>
+      <div class="columnLabour">
+        <div class="card" style="text-align:center;padding:50px">
+        <img src="./media/farming.png" height="100px" width="100px" />
+        <p class="name">John the Gardener</p>
+        <p>Hire For:</p>
+        <div class="hireMe" style="margin-top:10px">AHF 100/Hr</div>
+      </div>
+      </div>
+      <div class="columnLabour">
+        <div class="card" style="text-align:center;padding:50px">
+        <img src="./media/farmer.png" height="100px" width="100px" />
+        <p class="name">Rose the Harvester</p>
+        <p>Hire For:</p>
+        <div class="buyNow" style="margin-top:10px">AHF 150/Hr</div>
+      </div>
+      </div>
+      <div class="columnLabour">
+        <div class="card" style="text-align:center;padding:50px">
+        <img src="./media/farmer (3).png" height="100px" width="100px" />
+        <p class="name">Jerry the Rancher</p>
+        <p>Hire For:</p>
+        <div class="hireMe" style="margin-top:10px">AHF 150/Hr</div>
+      </div>
+      </div>
   </div>
 </div>
 </div>
@@ -151,7 +185,32 @@
   <div class="modal-content">
     <span class="closeGrass">&times;</span>
     <h1 style="text-align:center;padding-bottom:-40px">Grass Stripes</h1>
-    <p style="font-size:20px"> Lorem Ipsum Dolor Lorem Ipsum DolorLorem Ipsum DolorLorem Ipsum DolorLorem Ipsum DolorLorem Ipsum DolorLorem Ipsum DolorLorem Ipsum DolorLorem Ipsum DolorLorem Ipsum Dolor </p>
+    <p class="" style="font-size:30px;text-align:center"> Abu needs to get grasses to feed his cows and guard against erosion.
+      <br>Can you help Abu select the best bundles to buy given his target ?</p>
+      <div class="row">
+          <div class="column">
+            <div class="card" style="text-align:center;margin-left:120px;padding:20px">
+            <img src="./media/grass (1).png" height="100px" width="100px" />
+            <div class="buyNow" style="margin-top:10px">200g for AHF 200</div>
+          </div>
+          </div>
+          <div class="column">
+            <div class="card" style="text-align:center;margin-left:60px;padding:20px">
+            <img src="./media/grass (1).png" height="70px" width="70px" />
+            <img src="./media/grass (1).png" height="70px" width="70px" />
+            <div class="buyNow" style="margin-top:40px">400g for AHF 400</div>
+          </div>
+          </div>
+          <div class="column">
+            <div class="card" style="text-align:center;padding:20px">
+            <img src="./media/grass (1).png" height="50px" width="50px" />
+            <img src="./media/grass (1).png" height="70px" width="70px" />
+            <img src="./media/grass (1).png" height="50px" width="50px" />
+            <div class="buyNow" style="margin-top:40px">600g for AHF 600</div>
+          </div>
+          </div>
+          
+      </div>
   </div>
 </div>
 </div>
